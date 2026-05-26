@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.umv-brand {
+  display: inline-block;
+  color: #0f172a;
+  letter-spacing: 0.15em;
+
+  text-shadow:
+    0 0 6px rgba(37,99,235,0.18),
+    0 0 14px rgba(37,99,235,0.10);
+}
+
+
+/* GOLD DIVIDER */
+
+.brand-divider {
+  width: 65px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  animation: dividerGlow 3s infinite alternate;
+}
+
+@keyframes dividerGlow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+
+
+/* NAVIGATION HOVER EFFECT */
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+/* CONSULT BUTTON */
+
+.consult-btn {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1e40af
+  );
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 4px 12px rgba(37,99,235,0.25);
+}
+
+.consult-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(37,99,235,0.35);
+
+}
+@keyframes umvShine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -20% center;
+  }
+}
+.umv-brand {
+  display: inline-block;
+  color: #0f172a;
+  letter-spacing: 0.15em;
+  text-shadow:
+    0 0 6px rgba(37, 99, 235, 0.18),
+    0 0 12px rgba(37, 99, 235, 0.08);
+}
+
+/* divider under UMV */
+
+.brand-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #2563eb,
+    transparent
+  );
+}
+.umv-brand {
+  display: inline-block;
+  color: #0f172a;
+  letter-spacing: 0.15em;
+  text-shadow:
+    0 0 6px rgba(37, 99, 235, 0.18),
+    0 0 12px rgba(37, 99, 235, 0.08);
+}
+
+.brand-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #2563eb,
+    transparent
+  );
+}
+
+.umv-metal {
+  background: linear-gradient(
+    120deg,
+    #caa64b 0%,
+    #f5e6a5 20%,
+    #2563eb 40%,
+    #60a5fa 50%,
+    #2563eb 60%,
+    #f5e6a5 80%,
+    #caa64b 100%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: umvMetal 5s linear infinite;
+
+  text-shadow:
+    0 0 8px rgba(212,175,55,0.35),
+    0 0 18px rgba(37,99,235,0.25);
+}
+
+@keyframes umvMetal {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.umv-metal-3d {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    #6f5116 0%,
+    #b8892d 12%,
+    #f7e7a6 25%,
+    #d4af37 38%,
+    #fff2bf 50%,
+    #b8892d 62%,
+    #8a6720 78%,
+    #f0dc93 90%,
+    #6f5116 100%
+  );
+  background-size: 250% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: umvShine3d 5.5s linear infinite;
+  text-shadow:
+    0 1px 0 rgba(255, 245, 200, 0.55),
+    0 2px 0 rgba(181, 134, 34, 0.28),
+    0 3px 0 rgba(120, 87, 16, 0.18),
+    0 4px 10px rgba(0, 0, 0, 0.16);
+  transform: perspective(600px) rotateX(10deg);
+  letter-spacing: 0.22em;
+}
+
+.umv-metal-3d::before {
+  content: "UMV";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: rgba(70, 48, 8, 0.22);
+  text-shadow:
+    0 2px 0 rgba(70, 48, 8, 0.18),
+    0 6px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(2px);
+}
+
+.umv-metal-3d::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: -18%;
+  width: 38%;
+  height: 84%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.08) 75%,
+    transparent 100%
+  );
+  transform: skewX(-22deg);
+  filter: blur(0.5px);
+  animation: umvSweep 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes umvShine3d {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 250% center;
+  }
+}
+
+@keyframes umvSweep {
+  0% {
+    left: -22%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  45% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+.brand-divider {
+  width: 90px;
+  height: 1px;
+}
+
+.gold-blue {
+  background: linear-gradient(
+    to right,
+    transparent,
+    #caa34c,
+    #1f4e8c,
+    #caa34c,
+    transparent
+  );
+}
