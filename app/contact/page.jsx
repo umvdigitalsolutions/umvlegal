@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "Contact Us | UMV Legal & Associates",
@@ -47,6 +48,16 @@ function ArrowRightIcon() {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
       <path d="M5 12h14" />
       <path d="m13 5 7 7-7 7" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -129,15 +140,31 @@ export default function ContactPage() {
           {/* LOGO BOX */}
           <div className="flex justify-center lg:justify-end mt-12 lg:mt-0">
 
-            <div className="relative w-full max-w-md h-[260px] rounded-[32px] border border-white/20 bg-white/10 shadow-2xl backdrop-blur-md overflow-hidden">
+            <div className="relative inline-flex flex-col items-center gap-3 rounded-[32px] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-md">
 
               <Image
                 src="/umv1.png"
                 alt="UMV Legal Logo"
-                fill
-                className="object-contain p-8"
+                width={260}
+                height={263}
+                className="block h-auto w-[210px] object-contain sm:w-[250px]"
                 priority
               />
+
+              <Link
+                href="https://www.instagram.com/umvlegal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with UMV Legal on Instagram"
+                className="group flex w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-neutral-950/70 px-3 py-2 text-white shadow-lg backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-neutral-950/85 focus:outline-none focus:ring-2 focus:ring-white/80"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 via-rose-500 to-amber-400 shadow-md transition group-hover:scale-105">
+                  <InstagramIcon />
+                </span>
+                <span className="whitespace-nowrap text-xs font-semibold leading-none">
+                  @umvlegal
+                </span>
+              </Link>
 
             </div>
 
@@ -227,37 +254,7 @@ export default function ContactPage() {
 
           <h2 className="text-2xl font-bold">Send Inquiry</h2>
 
-          <form className="mt-6 space-y-4">
-
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full rounded-xl border px-4 py-3"
-            />
-
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full rounded-xl border px-4 py-3"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full rounded-xl border px-4 py-3"
-            />
-
-            <textarea
-              rows="4"
-              placeholder="Your Message"
-              className="w-full rounded-xl border px-4 py-3"
-            />
-
-            <button className="w-full rounded-xl bg-neutral-900 py-3 text-white hover:bg-yellow-500 hover:text-black">
-              Submit Inquiry
-            </button>
-
-          </form>
+          <ContactForm />
 
         </div>
 

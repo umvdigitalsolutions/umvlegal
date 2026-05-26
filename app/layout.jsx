@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono, Cinzel } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import AppShell from "./components/AppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +25,11 @@ export const metadata = {
   },
   description:
     "UMV Legal & Associates is a modern law firm offering legal support in intellectual property, commercial matters, dispute resolution, and advisory services.",
+  icons: {
+    icon: "/umv1.png",
+    shortcut: "/umv1.png",
+    apple: "/umv1.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -36,13 +40,9 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         <div className="relative min-h-screen bg-[radial-gradient(circle_at_top,rgba(250,204,21,0.08),transparent_22%),linear-gradient(to_bottom,#ffffff,#fffdf8)]">
-          <Header />
-
-          <main className="min-h-screen pt-[95px]">
+          <AppShell>
             {children}
-          </main>
-
-          <Footer />
+          </AppShell>
         </div>
       </body>
     </html>
