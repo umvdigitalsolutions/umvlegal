@@ -14,9 +14,9 @@ export default function Hero() {
       <div className="absolute -bottom-24 left-0 w-96 h-96 bg-blue-200/30 blur-3xl rounded-full"></div>
 
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-32">
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
 
           {/* LEFT CONTENT */}
           <div>
@@ -81,13 +81,13 @@ export default function Hero() {
 
 
           {/* RIGHT LOGO */}
-<div className="relative flex items-center justify-center">
+<div className="relative flex items-center justify-center pt-4 md:pt-0">
 
   {/* Blue glow aura */}
-  <div className="absolute w-[420px] h-[420px] bg-blue-300/30 blur-3xl rounded-full"></div>
+  <div className="absolute h-72 w-72 rounded-full bg-blue-300/30 blur-3xl md:h-[420px] md:w-[420px]"></div>
 
-  {/* Logo moved upward */}
-  <div className="relative -translate-y-24 animate-float animate-rotate-slow">
+  {/* Logo */}
+  <div className="relative md:-translate-y-24 md:animate-float md:animate-rotate-slow">
 
     <Image
       src="/umv.png"
@@ -95,7 +95,7 @@ export default function Hero() {
       width={520}
       height={520}
       priority
-      className="drop-shadow-[0_50px_90px_rgba(0,0,0,0.35)]"
+      className="h-auto w-[270px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.25)] sm:w-[340px] md:w-[520px] md:drop-shadow-[0_50px_90px_rgba(0,0,0,0.35)]"
     />
 
   </div>
