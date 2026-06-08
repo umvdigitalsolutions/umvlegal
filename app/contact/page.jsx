@@ -1,12 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import { pageMetadata } from "../seo";
 
-export const metadata = {
-  title: "Contact Us | UMV Legal & Associates",
+export const metadata = pageMetadata({
+  title: "Contact UMV Legal in Mumbai and Rajasthan",
   description:
-    "Contact UMV Legal & Associates for intellectual property, corporate, civil, criminal, and legal advisory services.",
-};
+    "Contact UMV Legal & Associates for trademark, copyright, intellectual property, corporate, civil, criminal, property, and legal advisory services in Mumbai, Rajasthan, and Jodhpur.",
+  path: "/contact",
+  keywords: [
+    "contact lawyer Mumbai",
+    "contact lawyer Rajasthan",
+    "trademark consultation Mumbai",
+    "legal consultation Jodhpur",
+    "UMV Legal contact",
+  ],
+});
 
 function PhoneIcon() {
   return (
@@ -79,8 +88,8 @@ const contactCards = [
   },
   {
     title: "Office Location",
-    value: "Rajasthan, India",
-    sub: "Consultation available by appointment",
+    value: "Mumbai & Rajasthan, India",
+    sub: "Jodhpur office and Mumbai branch support by appointment",
     href: "#location",
     icon: <MapPinIcon />,
   },
@@ -114,7 +123,8 @@ export default function ContactPage() {
             <p className="mt-6 max-w-xl text-neutral-300">
               Whether you need support with trademarks, copyrights,
               commercial agreements, litigation, or legal advisory,
-              our team is here to guide you with clarity and professionalism.
+              our team in Mumbai and Rajasthan is here to guide you with
+              clarity and professionalism.
             </p>
 
             <div className="mt-8 flex gap-4">
@@ -237,7 +247,7 @@ export default function ContactPage() {
 
             <div className="flex gap-3">
               <MapPinIcon />
-              <span>Rajasthan, India</span>
+              <span>Mumbai & Rajasthan, India</span>
             </div>
 
             <div className="flex gap-3">
@@ -258,6 +268,28 @@ export default function ContactPage() {
 
         </div>
 
+      </section>
+
+      <section id="location" className="mx-auto max-w-7xl px-6 pb-20">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border bg-neutral-50 p-8">
+            <h2 className="text-2xl font-bold">Mumbai Branch</h2>
+            <p className="mt-4 text-neutral-600">
+              Trademark and copyright assistance for businesses, creators,
+              startups, and brand owners in Mumbai, including IP filing support
+              and brand protection advisory by appointment.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border bg-neutral-50 p-8">
+            <h2 className="text-2xl font-bold">Rajasthan Office</h2>
+            <p className="mt-4 text-neutral-600">
+              Legal consultation and advisory from Jodhpur, Rajasthan for
+              intellectual property, litigation, corporate documentation,
+              property, taxation coordination, and related matters.
+            </p>
+          </div>
+        </div>
       </section>
 
     </main>

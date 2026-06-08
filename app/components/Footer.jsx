@@ -15,6 +15,7 @@ export default function Footer() {
           <div className="text-sm text-slate-600 text-center">
             <div>83 Sneh Sadan</div>
             <div>Jwala Vihar, Chopasni Housing Board, Behind Jeevan Jyoti Hospital, Jodhpur, Rajasthan 342008</div>
+            <div className="mt-2">Serving Mumbai, Rajasthan, Jodhpur and clients across India</div>
 
             <div className="mt-2">
               Phone: +91 99672 76861 • 73570 00507
@@ -41,6 +42,10 @@ export default function Footer() {
 
             <a href="/team" className="hover:text-blue-600 transition">
               Team
+            </a>
+
+            <a href="/ip-resources" className="hover:text-blue-600 transition">
+              IP Resources
             </a>
 
             <a href="/contact" className="hover:text-blue-600 transition">

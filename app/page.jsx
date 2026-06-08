@@ -1,5 +1,20 @@
 import Hero from "./components/Hero";
 import Link from "next/link";
+import { pageMetadata } from "./seo";
+
+export const metadata = pageMetadata({
+  title: "Trademark, Copyright & IP Law Firm in Mumbai and Rajasthan",
+  description:
+    "UMV Legal & Associates provides trademark, copyright, intellectual property, corporate, litigation, criminal defense, and property law services in Mumbai, Rajasthan, Jodhpur, and across India.",
+  path: "/",
+  keywords: [
+    "trademark lawyer Mumbai",
+    "copyright agent Mumbai",
+    "IP lawyer Rajasthan",
+    "law firm Jodhpur",
+    "brand protection lawyer India",
+  ],
+});
 
 export default function Home() {
   return (
@@ -46,6 +61,85 @@ export default function Home() {
                 From documentation to representation, we work with care and precision.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+              Mumbai
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-slate-900">
+              Trademark & Copyright Support in Mumbai
+            </h2>
+            <p className="mt-4 leading-7 text-slate-600">
+              Our Mumbai branch supports businesses, founders, creators, and
+              brand owners with trademark searches, filing, copyright matters,
+              IP prosecution coordination, and practical brand protection
+              advisory.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+              Rajasthan
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-slate-900">
+              Legal Services in Rajasthan & Jodhpur
+            </h2>
+            <p className="mt-4 leading-7 text-slate-600">
+              From Jodhpur, Rajasthan, UMV Legal & Associates assists clients
+              with intellectual property, civil litigation, criminal defense,
+              property matters, corporate documentation, taxation coordination,
+              and business legal advisory.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+                IP Resources
+              </span>
+              <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
+                Start Your Trademark & Copyright Preparation
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+                Use our trademark class finder, WhatsApp inquiry buttons, and
+                downloadable IP checklists before filing or consultation.
+              </p>
+            </div>
+
+            <Link
+              href="/ip-resources"
+              className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+            >
+              Open Resources
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              "Trademark Class Finder",
+              "WhatsApp Inquiry Buttons",
+              "Free IP Checklists",
+            ].map((tool) => (
+              <div
+                key={tool}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm"
+              >
+                <h3 className="text-xl font-bold text-slate-900">{tool}</h3>
+                <p className="mt-4 leading-7 text-slate-600">
+                  A practical tool for brand owners, startups, creators, and
+                  businesses preparing IP protection steps.
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

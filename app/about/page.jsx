@@ -1,5 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({
+  title: "About UMV Legal - IP Law Firm in Mumbai and Rajasthan",
+  description:
+    "Learn about UMV Legal & Associates, a modern law firm focused on intellectual property, trademark, copyright, business law, and legal advisory services in Mumbai and Rajasthan.",
+  path: "/about",
+  keywords: [
+    "about UMV Legal",
+    "IP law firm Mumbai",
+    "IP law firm Rajasthan",
+    "trademark law firm Jodhpur",
+  ],
+});
 
 export default function AboutPage() {
   const expertise = [
