@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="mt-10 flex gap-4 flex-wrap">
 
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-500 transition shadow-lg"
               >
                 Get Consultation

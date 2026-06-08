@@ -35,15 +35,15 @@ export default function Footer() {
           {/* Links */}
           <div className="flex justify-center md:justify-end gap-6 text-sm text-slate-600">
 
-            <a href="#services" className="hover:text-blue-600 transition">
+            <a href="/services" className="hover:text-blue-600 transition">
               Services
             </a>
 
-            <a href="#team" className="hover:text-blue-600 transition">
+            <a href="/team" className="hover:text-blue-600 transition">
               Team
             </a>
 
-            <a href="#contact" className="hover:text-blue-600 transition">
+            <a href="/contact" className="hover:text-blue-600 transition">
               Contact
             </a>
 
