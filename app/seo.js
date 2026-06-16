@@ -1,5 +1,5 @@
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.umvlegal.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.umvlegalassociates.com";
 
 export const siteName = "UMV Legal & Associates";
 
@@ -8,12 +8,11 @@ export const defaultSeoKeywords = [
   "law firm in Mumbai",
   "law firm in Rajasthan",
   "law firm in Jodhpur",
-  "best trademark lawyer in Jodhpur",
-  "best trademark lawyer in Rajasthan",
-  "best trademark lawyer in Mumbai",
-  "best trademark attorney in Jodhpur",
-  "best trademark attorney in Rajasthan",
-  "best trademark attorney in Mumbai",
+  "IP law firm in Jodhpur",
+  "trademark lawyer in Jodhpur",
+  "copyright lawyer in Jodhpur",
+  "patent lawyer in Jodhpur",
+  "legal services in Rajasthan",
   "trademark lawyer Mumbai",
   "trademark attorney Rajasthan",
   "copyright agent Mumbai",

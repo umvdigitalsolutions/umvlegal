@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t bg-white/90">
@@ -36,21 +38,21 @@ export default function Footer() {
           {/* Links */}
           <div className="flex justify-center md:justify-end gap-6 text-sm text-slate-600">
 
-            <a href="/services" className="hover:text-blue-600 transition">
+            <Link href="/services" className="hover:text-blue-600 transition">
               Services
-            </a>
+            </Link>
 
-            <a href="/team" className="hover:text-blue-600 transition">
+            <Link href="/team" className="hover:text-blue-600 transition">
               Team
-            </a>
+            </Link>
 
-            <a href="/ip-resources" className="hover:text-blue-600 transition">
+            <Link href="/ip-resources" className="hover:text-blue-600 transition">
               IP Resources
-            </a>
+            </Link>
 
-            <a href="/contact" className="hover:text-blue-600 transition">
+            <Link href="/contact" className="hover:text-blue-600 transition">
               Contact
-            </a>
+            </Link>
 
           </div>
 

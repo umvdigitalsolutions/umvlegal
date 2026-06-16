@@ -3,16 +3,22 @@ import Link from "next/link";
 import { pageMetadata } from "./seo";
 
 export const metadata = pageMetadata({
-  title: "Trademark, Copyright & IP Law Firm in Mumbai and Rajasthan",
+  title: "IP Law Firm in Jodhpur | Trademark, Copyright & Legal Services",
   description:
-    "UMV Legal & Associates provides trademark, copyright, intellectual property, corporate, litigation, criminal defense, and property law services in Mumbai, Rajasthan, Jodhpur, and across India.",
+    "UMV Legal & Associates provides information on trademark, copyright, patent, design, corporate, property and litigation-related legal services in Jodhpur, Rajasthan and India.",
   path: "/",
   keywords: [
-    "trademark lawyer Mumbai",
-    "copyright agent Mumbai",
-    "IP lawyer Rajasthan",
-    "law firm Jodhpur",
-    "brand protection lawyer India",
+    "IP law firm in Jodhpur",
+    "trademark lawyer in Jodhpur",
+    "copyright lawyer in Jodhpur",
+    "patent lawyer in Jodhpur",
+    "law firm in Jodhpur",
+    "legal services in Rajasthan",
+    "trademark registration in Jodhpur",
+    "trademark objection reply",
+    "trademark opposition in India",
+    "corporate lawyer in Jodhpur",
+    "property lawyer in Jodhpur",
   ],
 });
 
@@ -182,6 +188,41 @@ export default function Home() {
                   Professional legal guidance tailored to your matter with strong attention to detail and practical outcomes.
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+            Legal Information
+          </span>
+          <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
+            Trademark, IP and Local Legal Guides
+          </h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              ["/trademark-registration-jodhpur", "Trademark Registration in Jodhpur"],
+              ["/trademark-objection-reply", "Trademark Objection Reply"],
+              ["/trademark-opposition-india", "Trademark Opposition in India"],
+              ["/trademark-hearing-india", "Trademark Hearing in India"],
+              ["/copyright-registration-jodhpur", "Copyright Registration in Jodhpur"],
+              ["/patent-filing-india", "Patent Filing in India"],
+              ["/design-registration-india", "Design Registration in India"],
+              ["/startup-legal-services", "Startup Legal Services"],
+              ["/corporate-lawyer-jodhpur", "Corporate Lawyer in Jodhpur"],
+              ["/property-lawyer-jodhpur", "Property Lawyer in Jodhpur"],
+              ["/ip-law-firm-jodhpur", "IP Law Firm in Jodhpur"],
+              ["/law-firm-jodhpur", "Law Firm in Jodhpur"],
+            ].map(([href, label]) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {label}
+              </Link>
             ))}
           </div>
         </div>

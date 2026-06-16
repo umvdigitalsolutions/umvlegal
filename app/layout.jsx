@@ -28,27 +28,27 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "UMV Legal & Associates - IP, Trademark & Legal Services in Mumbai and Rajasthan",
+      "UMV Legal & Associates - IP, Trademark & Legal Services in Jodhpur and Rajasthan",
     template: "%s | UMV Legal & Associates",
   },
   description:
-    "UMV Legal & Associates provides trademark, copyright, intellectual property, corporate, litigation, and legal advisory services in Mumbai, Rajasthan, Jodhpur, and across India.",
+    "UMV Legal & Associates provides trademark, copyright, intellectual property, corporate, property, litigation, and legal advisory information in Jodhpur, Rajasthan, Mumbai, and across India.",
   keywords: defaultSeoKeywords,
   alternates: {
     canonical: "/",
   },
   openGraph: pageMetadata({
     title:
-      "UMV Legal & Associates - IP, Trademark & Legal Services in Mumbai and Rajasthan",
+      "UMV Legal & Associates - IP, Trademark & Legal Services in Jodhpur and Rajasthan",
     description:
-      "Trademark, copyright, IP, corporate, litigation, and legal advisory services for clients in Mumbai, Rajasthan, Jodhpur, and across India.",
+      "Trademark, copyright, IP, corporate, property, litigation, and legal advisory information for clients in Jodhpur, Rajasthan, Mumbai, and across India.",
     path: "/",
   }).openGraph,
   twitter: pageMetadata({
     title:
-      "UMV Legal & Associates - IP, Trademark & Legal Services in Mumbai and Rajasthan",
+      "UMV Legal & Associates - IP, Trademark & Legal Services in Jodhpur and Rajasthan",
     description:
-      "Trademark, copyright, IP, corporate, litigation, and legal advisory services for clients in Mumbai, Rajasthan, Jodhpur, and across India.",
+      "Trademark, copyright, IP, corporate, property, litigation, and legal advisory information for clients in Jodhpur, Rajasthan, Mumbai, and across India.",
     path: "/",
   }).twitter,
   robots: {
