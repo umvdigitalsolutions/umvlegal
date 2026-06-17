@@ -1,5 +1,4 @@
 import { siteUrl } from "./seo";
-import { seoPages } from "./seo-page-data";
 
 export default function sitemap() {
   const routes = [
@@ -9,7 +8,6 @@ export default function sitemap() {
     "/team",
     "/ip-resources",
     "/contact",
-    ...seoPages.map((page) => page.url),
   ];
 
   return routes.map((route) => ({
