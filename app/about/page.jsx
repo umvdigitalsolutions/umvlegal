@@ -80,15 +80,8 @@ export default function AboutPage() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
-                  className="rounded-full bg-blue-600 px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-500"
-                >
-                  Get Consultation
-                </Link>
-
-                <Link
                   href="/services"
-                  className="rounded-full border border-slate-300 px-8 py-3 font-semibold text-slate-800 transition hover:border-blue-600 hover:text-blue-700"
+                  className="rounded-full bg-blue-600 px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-500"
                 >
                   Explore Services
                 </Link>

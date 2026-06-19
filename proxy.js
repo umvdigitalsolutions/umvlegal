@@ -17,6 +17,7 @@ export function proxy(request) {
   const disclaimerUrl = request.nextUrl.clone();
   disclaimerUrl.pathname = "/disclaimer";
   disclaimerUrl.search = "";
+  disclaimerUrl.searchParams.set("next", `${pathname}${request.nextUrl.search}`);
 
   return NextResponse.redirect(disclaimerUrl);
 }

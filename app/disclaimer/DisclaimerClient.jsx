@@ -1,23 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function DisclaimerPage() {
-  const router = useRouter();
+  const getNextPath = () => {
+    const params = new URLSearchParams(window.location.search);
+    const nextPath = params.get("next") || "/";
+
+    if (!nextPath.startsWith("/") || nextPath.startsWith("//")) {
+      return "/";
+    }
+
+    return nextPath;
+  };
 
   const handleAgree = () => {
     try {
       localStorage.setItem("umv_disclaimer_accepted", "true");
       document.cookie =
-        "umv_disclaimer_accepted=true; path=/; max-age=31536000; SameSite=Lax";
+        "umv_disclaimer_accepted=true; path=/; Max-Age=31536000; SameSite=Lax";
     } catch (error) {}
 
-    router.replace("/");
-
-    setTimeout(() => {
-      window.location.replace("/");
-    }, 100);
+    window.location.replace(getNextPath());
   };
 
   const handleDisagree = () => {

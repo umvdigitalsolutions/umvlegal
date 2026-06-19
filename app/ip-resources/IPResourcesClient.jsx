@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 
 const trademarkClasses = [
   {
@@ -96,21 +95,6 @@ const trademarkClasses = [
   },
 ];
 
-const whatsappOptions = [
-  {
-    title: "Trademark Filing Inquiry",
-    text: "Hello UMV Legal, I want help with trademark search and filing. Please guide me.",
-  },
-  {
-    title: "Copyright Inquiry",
-    text: "Hello UMV Legal, I want help with copyright registration/protection. Please guide me.",
-  },
-  {
-    title: "Legal Consultation",
-    text: "Hello UMV Legal, I want to book a legal consultation for my matter. Please contact me.",
-  },
-];
-
 const checklists = [
   {
     title: "Trademark Filing Checklist",
@@ -132,9 +116,24 @@ const checklists = [
   },
 ];
 
-function createWhatsAppLink(message) {
-  return `https://wa.me/919967276861?text=${encodeURIComponent(message)}`;
-}
+const preparationNotes = [
+  {
+    title: "Identify the correct class",
+    text: "Start with the closest goods or services category, then check whether related classes are needed for the same brand.",
+  },
+  {
+    title: "Prepare applicant details",
+    text: "Keep the applicant name, entity type, address, brand ownership details, and supporting authorization documents ready.",
+  },
+  {
+    title: "Check distinctiveness",
+    text: "Avoid generic, descriptive, or commonly used words where possible. Stronger marks are easier to protect and enforce.",
+  },
+  {
+    title: "Review conflicts",
+    text: "A class match is only the first step. Similar existing marks, phonetic similarity, and market use should be reviewed before filing.",
+  },
+];
 
 export default function IPResourcesClient() {
   const [query, setQuery] = useState("");
@@ -169,12 +168,12 @@ export default function IPResourcesClient() {
             IP Resources
           </span>
           <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
-            Trademark Class Finder, WhatsApp Inquiry & IP Checklists
+            Trademark Class Finder & IP Filing Checklists
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            Use these free resources to take the first practical step for trademark,
-            copyright, and brand protection matters in Mumbai, Rajasthan,
-            Jodhpur, and across India.
+            Use these preparation resources to understand trademark classes,
+            organize filing details, and review brand protection basics before
+            taking the next legal step.
           </p>
         </div>
       </section>
@@ -184,7 +183,7 @@ export default function IPResourcesClient() {
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
-                Tool 1
+                Resource 1
               </span>
               <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
                 Trademark Class Finder
@@ -227,16 +226,9 @@ export default function IPResourcesClient() {
                           {item.title}
                         </h3>
                       </div>
-                      <Link
-                        href={createWhatsAppLink(
-                          `Hello UMV Legal, I want guidance on Trademark Class ${item.classNumber} for ${item.title}.`
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-full bg-green-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-green-500"
-                      >
-                        Ask on WhatsApp
-                      </Link>
+                      <div className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
+                        Indicative class
+                      </div>
                     </div>
                     <p className="mt-4 leading-7 text-slate-600">
                       {item.examples}
@@ -263,51 +255,14 @@ export default function IPResourcesClient() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
-              Tool 2
+              Resource 2
             </span>
             <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
-              WhatsApp Pre-filled Inquiry Buttons
+              Filing Preparation Guides
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Choose an inquiry type and WhatsApp will open with a ready message
-              addressed to UMV Legal & Associates.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {whatsappOptions.map((option) => (
-              <Link
-                key={option.title}
-                href={createWhatsAppLink(option.text)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition hover:-translate-y-1 hover:border-green-200 hover:shadow-xl"
-              >
-                <h3 className="text-2xl font-bold text-slate-900">
-                  {option.title}
-                </h3>
-                <p className="mt-4 leading-7 text-slate-600">{option.text}</p>
-                <div className="mt-6 inline-flex rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white">
-                  Open WhatsApp
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-slate-50 py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
-              Tool 3
-            </span>
-            <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
-              Free Downloadable IP Checklists
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Download simple checklists to prepare your trademark, copyright,
-              and brand protection information before consultation or filing.
+              Download simple checklists to organize trademark, copyright, and
+              brand protection information before filing or professional review.
             </p>
           </div>
 
@@ -315,7 +270,7 @@ export default function IPResourcesClient() {
             {checklists.map((checklist) => (
               <div
                 key={checklist.title}
-                className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm"
               >
                 <h3 className="text-2xl font-bold text-slate-900">
                   {checklist.title}
@@ -330,6 +285,39 @@ export default function IPResourcesClient() {
                 >
                   Download Checklist
                 </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl">
+            <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+              Resource 3
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
+              Before You File
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              A few practical points help avoid avoidable objections, class
+              errors, and weak filing strategy.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {preparationNotes.map((note) => (
+              <div
+                key={note.title}
+                className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+              >
+                <h3 className="text-2xl font-bold text-slate-900">
+                  {note.title}
+                </h3>
+                <p className="mt-4 leading-7 text-slate-600">
+                  {note.text}
+                </p>
               </div>
             ))}
           </div>

@@ -116,24 +116,27 @@ export default function Home() {
                 Start Your Trademark & Copyright Preparation
               </h2>
               <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-                Use our trademark class finder, WhatsApp inquiry buttons, and
-                downloadable IP checklists before filing or consultation.
+                Use our trademark class finder, filing readiness notes, and
+                downloadable IP checklists before filing or professional review.
               </p>
             </div>
 
             <Link
               href="/ip-resources"
-              className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              className="group inline-flex items-center gap-3 rounded-full border border-slate-900 bg-slate-900 px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_16px_36px_rgba(15,23,42,0.18)] transition duration-300 hover:-translate-y-0.5 hover:border-blue-700 hover:bg-blue-700 hover:shadow-[0_20px_44px_rgba(29,78,216,0.24)]"
             >
               Open Resources
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/12 text-base leading-none transition duration-300 group-hover:translate-x-1 group-hover:bg-white/20">
+                →
+              </span>
             </Link>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               "Trademark Class Finder",
-              "WhatsApp Inquiry Buttons",
-              "Free IP Checklists",
+              "Filing Readiness Notes",
+              "Downloadable IP Checklists",
             ].map((tool) => (
               <div
                 key={tool}

@@ -33,17 +33,17 @@ export default function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/services"
               className="rounded-sm bg-[#d4af37] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#08111f] transition hover:bg-[#f1d77f]"
             >
-              Book Consultation
+              Practice Areas
             </Link>
 
             <Link
-              href="/services"
+              href="/ip-resources"
               className="rounded-sm border border-white/30 px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white transition hover:border-[#d4af37] hover:text-[#f3d98b]"
             >
-              Practice Areas
+              IP Resources
             </Link>
           </div>
 
@@ -83,14 +83,16 @@ export default function Hero() {
 
               <div className="mt-5 grid gap-3 text-sm">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                  <span className="font-semibold text-slate-500">Branch</span>
-                  <span className="font-bold text-slate-950">Mumbai</span>
+                  <span className="font-semibold text-slate-500">
+                    Head Office
+                  </span>
+                  <span className="font-bold text-slate-950">Jodhpur</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                  <span className="font-semibold text-slate-500">Office</span>
-                  <span className="font-bold text-slate-950">
-                    Jodhpur, Rajasthan
+                  <span className="font-semibold text-slate-500">
+                    Branch Office
                   </span>
+                  <span className="font-bold text-slate-950">Mumbai</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-semibold text-slate-500">Reach</span>

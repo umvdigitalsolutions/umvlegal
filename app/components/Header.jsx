@@ -56,13 +56,6 @@ export default function Header() {
             <div className="rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-600 shadow-sm">
               +91 99672 76861
             </div>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-full bg-gradient-to-r from-[#c9a44c] to-[#e2c06d] px-6 py-3 text-sm font-semibold text-black shadow-[0_10px_24px_rgba(201,164,76,0.28)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(201,164,76,0.35)]"
-            >
-              Get Consultation
-            </Link>
           </div>
 
           <button
@@ -92,14 +85,6 @@ export default function Header() {
               <div className="px-4 pt-3 text-sm text-slate-500">
                 +91 99672 76861
               </div>
-
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="mt-3 block rounded-xl bg-gradient-to-r from-[#c9a44c] to-[#e2c06d] px-4 py-3 text-center text-sm font-semibold text-black shadow-md transition hover:opacity-95"
-              >
-                Get Consultation
-              </Link>
             </div>
           </div>
         )}

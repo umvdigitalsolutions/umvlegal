@@ -11,8 +11,8 @@ export const metadata = pageMetadata({
   keywords: [
     "contact lawyer Mumbai",
     "contact lawyer Rajasthan",
-    "trademark consultation Mumbai",
-    "legal consultation Jodhpur",
+    "trademark lawyer Mumbai",
+    "legal advisory Jodhpur",
     "UMV Legal contact",
   ],
 });
@@ -89,7 +89,7 @@ const contactCards = [
   {
     title: "Office Location",
     value: "Mumbai & Rajasthan, India",
-    sub: "Jodhpur office and Mumbai branch support by appointment",
+    sub: "Head Office, Jodhpur and Branch Office, Mumbai",
     href: "#location",
     icon: <MapPinIcon />,
   },
@@ -273,20 +273,20 @@ export default function ContactPage() {
       <section id="location" className="mx-auto max-w-7xl px-6 pb-20">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl border bg-neutral-50 p-8">
-            <h2 className="text-2xl font-bold">Mumbai Branch</h2>
+            <h2 className="text-2xl font-bold">Head Office, Jodhpur</h2>
             <p className="mt-4 text-neutral-600">
-              Trademark and copyright assistance for businesses, creators,
-              startups, and brand owners in Mumbai, including IP filing support
-              and brand protection advisory by appointment.
+              Legal advisory from Jodhpur, Rajasthan for
+              intellectual property, litigation, corporate documentation,
+              property, taxation coordination, and related matters.
             </p>
           </div>
 
           <div className="rounded-3xl border bg-neutral-50 p-8">
-            <h2 className="text-2xl font-bold">Rajasthan Office</h2>
+            <h2 className="text-2xl font-bold">Branch Office, Mumbai</h2>
             <p className="mt-4 text-neutral-600">
-              Legal consultation and advisory from Jodhpur, Rajasthan for
-              intellectual property, litigation, corporate documentation,
-              property, taxation coordination, and related matters.
+              Trademark and copyright assistance for businesses, creators,
+              startups, and brand owners in Mumbai, including IP filing support
+              and brand protection advisory.
             </p>
           </div>
         </div>
