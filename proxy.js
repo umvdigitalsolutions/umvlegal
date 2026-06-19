@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const DISCLAIMER_COOKIE = "umv_disclaimer_accepted";
+const DISCLAIMER_COOKIE = "umv_disclaimer_session_accepted";
 const SEARCH_BOT_PATTERN =
   /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|linkedinbot/i;
 

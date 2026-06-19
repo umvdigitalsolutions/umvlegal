@@ -2,23 +2,29 @@
 
 import Image from "next/image";
 
-export default function DisclaimerPage() {
+export default function DisclaimerPage({ nextPath }) {
+  const ACCEPTED_KEY = "umv_disclaimer_session_accepted";
+  const OLD_ACCEPTED_KEY = "umv_disclaimer_accepted";
+
   const getNextPath = () => {
     const params = new URLSearchParams(window.location.search);
-    const nextPath = params.get("next") || "/";
+    const resolvedNextPath = nextPath || params.get("next") || "/";
 
-    if (!nextPath.startsWith("/") || nextPath.startsWith("//")) {
+    if (!resolvedNextPath.startsWith("/") || resolvedNextPath.startsWith("//")) {
       return "/";
     }
 
-    return nextPath;
+    return resolvedNextPath;
   };
 
   const handleAgree = () => {
     try {
-      localStorage.setItem("umv_disclaimer_accepted", "true");
+      sessionStorage.setItem(ACCEPTED_KEY, "true");
+      localStorage.removeItem(OLD_ACCEPTED_KEY);
       document.cookie =
-        "umv_disclaimer_accepted=true; path=/; Max-Age=31536000; SameSite=Lax";
+        `${ACCEPTED_KEY}=true; path=/; SameSite=Lax`;
+      document.cookie =
+        `${OLD_ACCEPTED_KEY}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
     } catch (error) {}
 
     window.location.replace(getNextPath());
@@ -26,9 +32,12 @@ export default function DisclaimerPage() {
 
   const handleDisagree = () => {
     try {
-      localStorage.removeItem("umv_disclaimer_accepted");
+      sessionStorage.removeItem(ACCEPTED_KEY);
+      localStorage.removeItem(OLD_ACCEPTED_KEY);
       document.cookie =
-        "umv_disclaimer_accepted=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        `${ACCEPTED_KEY}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+      document.cookie =
+        `${OLD_ACCEPTED_KEY}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
     } catch (error) {}
 
     window.location.replace("https://www.google.com");
